@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@use '../../Styles/App.scss'; 
+
+.DivButton {
+    
+        button {
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 50px;
+            width: 100%;
+            background-color: hsl(248, 32%, 49%);
+            color: white;
+            line-height: 20px;
+
+                span {
+                    color: hsl(246, 25%, 77%);
+                }
+        }
+}
