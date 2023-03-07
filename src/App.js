@@ -1,11 +1,16 @@
 import './Styles/App.scss';
+import Header from './Components/header/Header';
+import Button from './Components/Button/Button';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Somente um teste no SCSS</h1>
+    <>
+      <Header/>
       
-    </div>
+      <Button/>
+
+      {/* <Form/> */}
+    </>
   );
 }
 
