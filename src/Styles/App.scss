@@ -1,25 +1,20 @@
-div {
-    h1 {
-        color: red;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@use '../Components/header/Header.modules.scss';
+
+
+body {
+    padding: 60px 20px 30px 20px ;
 }
 
 
+
+
 /*
-# Front-end Style Guide
-
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
 ## Colors
 
 ### Primary
 
-- Red: hsl(0, 100%, 74%) 
+- Red: hsl(0, 100%, 74%)
 - Green: hsl(154, 59%, 51%)
 
 ### Accent
@@ -30,6 +25,7 @@ The designs were created to the following widths:
 
 - Dark Blue: hsl(249, 10%, 26%) 
 - Grayish Blue: hsl(246, 25%, 77%)
+
 
 ## Typography
 
