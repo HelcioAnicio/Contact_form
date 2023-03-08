@@ -1,19 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-@use '../../Styles/App.scss'; 
 
 .DivButton {
+    margin-top: 50px;
     
         button {
+            display: block;
+            font-size: 1rem;
             border: none;
             border-radius: 10px;
-            padding: 20px;
-            margin-top: 50px;
+            padding: 15px 30px;
+            margin: 0 auto;
             width: 100%;
+            max-width: 400px;
             background-color: hsl(248, 32%, 49%);
             color: white;
             line-height: 20px;
+            cursor: pointer;
+            -webkit-box-shadow: 0px 10px 5px 1px rgba(0,0,0,0.12);
+            -moz-box-shadow: 0px 10px 5px 1px rgba(0,0,0,0.12);
+            box-shadow: 0px 10px 5px 1px rgba(0,0,0,0.12);
+
 
                 span {
+                    font-size: 1rem;
                     color: hsl(246, 25%, 77%);
                 }
         }
