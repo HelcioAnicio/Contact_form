@@ -6,7 +6,7 @@ function Form() {
     return (
         <>
             <div className="DivForm">
-                <form >
+                <form action="">
 
                     <input required type="text" value="" name="FirstName"  placeholder="First Name" />
                     
