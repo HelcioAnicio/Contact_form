@@ -1,15 +1,17 @@
 import './Styles/App.scss';
-import Header from './Components/header/Header';
+import Header from './Components/Header/Header';
 import Button from './Components/Button/Button';
+import Form from './Components/Form/Form';
 
 function App() {
   return (
     <>
       <Header/>
       
-      <Button/>
-
-      {/* <Form/> */}
+      <div className="DivBr">
+        <Button/>
+        <Form/>
+      </div>
     </>
   );
 }
