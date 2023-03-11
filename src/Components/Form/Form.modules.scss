@@ -28,6 +28,21 @@
                     outline: none;
                 }
 
+                .messageError {
+                    background-image: url(../../assets/icon-error.svg);
+                    background-position: 98% center;
+                    background-repeat: no-repeat;
+                }
+
+                .Error {
+                    width: 100%;
+                    
+                        p {
+                            text-align: right;
+                            color: hsl(0, 100%, 74%);
+                        }
+                }
+
                 input[type=text]:focus, 
                 input[type=email]:focus, 
                 input[type=password]:focus {
@@ -71,13 +86,11 @@
         }
 
     p {
-        // border: 1px solid red;
         text-align: center;
         margin: 0 auto;
         margin-top: 10px;
         width: 95%;
         color: hsl(246, 25%, 77%);
-        // color: hsl(249, 10%, 26%);
         font-size: .7rem;
 
             span {
