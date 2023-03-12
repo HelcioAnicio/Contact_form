@@ -1,5 +1,21 @@
 import { useState } from 'react';
 import './Form.modules.scss'
+import { initializeApp } from "firebase/app";
+import { collection, getFirestore, addDoc } from "firebase/firestore";
+
+const firebaseApp = {
+    apiKey: "AIzaSyAgc4Tl-rjYyg_xI8iVn3hidpzf4bPqZ6Y",
+    authDomain: "contact-form-77b09.firebaseapp.com",
+    projectId: "contact-form-77b09",
+    storageBucket: "contact-form-77b09.appspot.com",
+    messagingSenderId: "327212833900",
+    appId: "1:327212833900:web:cec36c21cc1010336b4c49"
+};
+const app = initializeApp(firebaseApp) ;
+const db = getFirestore(app)
+const userCollectionRef = collection(db, 'users');
+
+
 
 function Form() {
     const [firstName, setFirstName] = useState('')
@@ -8,19 +24,33 @@ function Form() {
     const [password, setPassword] = useState('')
     const [formSubmitted, setFormSubmitted] = useState(false)
 
-    function cadastrarUsuario(e) {
-        e.preventDefault()
+    async function cadastrarUsuario(e) {
+        e.preventDefault();
         if (firstName && lastName && email && password) {
-            console.log (`O Usuário foi cadastrado com os seguintes dados:
+            console.log(`O Usuário foi cadastrado com os seguintes dados:
                 First Name:${firstName};
                 Last Name:${lastName};
                 Email:${email};
                 Password:${password}
-            `)
+            `);
+    
+            try {
+                const user = await addDoc(userCollectionRef, {
+                    firstName,
+                    lastName,
+                    email,
+                    password,
+                });
+                console.log("Usuário cadastrado no Firebase:", user.id);
+            } catch (error) {
+                console.error("Erro ao cadastrar usuário no Firebase:", error);
+            }
+    
         } else {
-            setFormSubmitted(true)
+            setFormSubmitted(true);
         }
     }
+    
     
     return (
         <>
