@@ -3,9 +3,13 @@
 
 
 body {
-    padding: 60px 20px 30px 20px ;
-
+    padding: 60px 20px 80px 20px ;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 
 @media screen and (min-width: 768px) and (min-height: 900px) {
@@ -14,17 +18,22 @@ body {
     }
   }
   
-  @media screen and (min-width: 800px) and (min-height: 1050px) {
-    html {
-      font-size: 20px;
+    @media screen and (min-width: 800px) and (min-height: 1050px) {
+      html {
+        font-size: 20px;
+      }
+
+      body {
+        padding: 0 20px 40px 20px ;
     }
   }
   
   @media screen and (min-width: 1200px) and (min-height: 650px) {
     body {
-        padding-left: 100px ;
+      padding: 0 20px 40px 20px ;
+      padding-left: 100px ;
     }
-
+    
     .DivBr {
         display: inline-block;
         width: 40%;
